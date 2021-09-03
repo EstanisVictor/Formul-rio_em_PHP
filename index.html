@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body{
+            margin: 50px;
+            padding: 50px;
+        }
+        form{
+            font-size: 16px ;
+            background: #C0C0C0;
+            width: 500px;
+            margin: 0 auto;
+            padding: 0 10px 10px 10px;
+            border: 1px solid;
+        }
+
+        input, textarea {
+            padding: 10px;
+        }
+        .enviar input{
+            border: 1px solid;
+            height: 40px;
+            width: 100px;
+            color: white;
+            background: green; 
+        }
+        .limpar input{
+            border: 1px solid;
+            height: 40px;
+            width: 100px;
+            color: white;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+   
+    <form name="formulario" action="confirmacao.php" method="POST">
+
+        <p class="nome">
+            <input type="text" name="nome" placeholder="Informe seu nome" >
+        </p>
+
+        <p class="email">
+            <input type="email" name="email" placeholder="Informe seu email" >
+        </p>
+
+        <p class="sexo">
+            Sexo:
+            <input type="radio" name="sexo" value="Feminino">Feminino
+            <input type="radio" name="sexo" value="Masculino">Masculino
+        </p>
+
+        <p>
+            Escolaridade: 
+            <select id="escolaridade" name="escolaridade">
+                <option value="Fundamental">Fundamental</option>
+                <option value="Medio">Medio</option>
+                <option value="Superior">Superior</option>
+            </select>
+        </p>
+
+        <p class="enviar">
+            <input type="submit" name="enviar" value="Enviar">
+        </p>
+        <p class="limpar">
+            <input type="reset" name= "limpar" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
